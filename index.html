@@ -18,7 +18,32 @@ h3 {
 </head>
 <body>
 
-<h3>In Development 🕷️</h3>
+<h3>In Development</h3>
+
+<div id="spiders"></div>
+
+<script>
+  const spiders = document.getElementById("spiders");
+
+  for (let i = 0; i < 100; i++) {
+    const span = document.createElement("span");
+    span.textContent = "🕷️";
+    span.style.fontSize = `${Math.random() * 20 + 10}px`;
+
+    span.style.left = `${Math.random() * 100}vw`;
+    span.style.top = `${Math.random() * 100}vh`;
+
+    span.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    spiders.appendChild(span);
+  }
+</script>
+
+<style>
+  #spiders span {
+    position: absolute;
+  }
+</style>
 
 </body>
 </html>
