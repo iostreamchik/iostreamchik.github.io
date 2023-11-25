@@ -32,7 +32,8 @@ h3 {
 <script>
   const spiders = document.getElementById("spiders");
 
-  for (let i = 0; i < 100; i++) {
+let numberOfSpiders = Math.floor(Math.random() * 10) + 1;
+for (let i = 0; i < numberOfSpiders; i++) {
     const span = document.createElement("span");
     span.textContent = "🕷️";
     span.style.fontSize = `${Math.random() * 20 + 10}px`;
@@ -43,7 +44,7 @@ h3 {
     span.style.transform = `rotate(${Math.random() * 360}deg)`;
 
     spiders.appendChild(span);
-  }
+}
 </script>
 
 <style>
